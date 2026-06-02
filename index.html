@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Abinaya Saravanan — Regulatory Affairs & Compliance</title>
+<meta name="description" content="Abinaya Saravanan — Global Regulatory Affairs & Compliance Specialist. EU & UK cosmetics regulations, REACH, MOCRA, CLP, SAP EHS. Chennai, India." />
+<link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="%237d2837"/><text x="50%" y="56%" text-anchor="middle" dominant-baseline="middle" font-family="Georgia,serif" font-weight="700" font-size="34" fill="%23fbf7f1">A</text></svg>' />
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ============================================================
+   TOKENS
+   ============================================================ */
+:root{
+  --bg:#fbf7f1;
+  --bg-2:#f3ede4;
+  --surface:#ffffff;
+  --surface-2:#f8f2e9;
+  --text:#231a1d;
+  --text-soft:#4f4045;
+  --muted:#857a7e;
+  --dim:#b5aaad;
+  --line:rgba(35,26,29,.10);
+  --line-2:rgba(35,26,29,.18);
+  --wine:#7d2837;
+  --wine-2:#9b3445;
+  --rose:#c89968;
+  --rose-soft:#ead7c0;
+  --olive:#5a4a3a;
+  --grad:linear-gradient(115deg,#7d2837,#c89968);
+  --shadow-sm:0 6px 18px -8px rgba(125,40,55,.18);
+  --shadow:0 22px 60px -22px rgba(125,40,55,.22);
+  --display:'Fraunces',Georgia,serif;
+  --body:'Manrope',system-ui,sans-serif;
+  --mono:'JetBrains Mono',monospace;
+  --maxw:1180px;
+  --nav-h:74px;
+  --sec-pad:50px;
+  --r:18px;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:74px}
+body{
+  font-family:var(--body);background:var(--bg);color:var(--text);
+  line-height:1.62;overflow-x:hidden;-webkit-font-smoothing:antialiased;
+  font-size:16px;
+}
+/* atmospheric warm glows + paper grain */
+body::before{
+  content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;
+  background:
+    radial-gradient(46vw 46vw at 90% 8%, rgba(200,153,104,.18),transparent 60%),
+    radial-gradient(50vw 50vw at -8% 100%, rgba(125,40,55,.10),transparent 65%),
+    radial-gradient(34vw 34vw at 50% 55%, rgba(234,215,192,.18),transparent 70%);
+}
+body::after{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.035;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit}
+::selection{background:var(--wine);color:#fff}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;width:100%}
+.eyebrow{font-family:var(--mono);font-size:.74rem;letter-spacing:.32em;text-transform:uppercase;color:var(--wine);font-weight:500}
+.serif{font-family:var(--display)}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.wine-text{color:var(--wine)}
+.italic{font-style:italic}
+
+/* ornamental divider between sections */
+.ornament{display:flex;align-items:center;justify-content:center;gap:14px;color:var(--rose);margin:0 auto}
+.ornament .line{width:60px;height:1px;background:linear-gradient(90deg,transparent,var(--rose),transparent)}
+.ornament svg{width:14px;height:14px;flex-shrink:0}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  font-family:var(--body);font-weight:600;font-size:.94rem;letter-spacing:.01em;
+  padding:14px 26px;border-radius:999px;border:1px solid transparent;cursor:pointer;
+  transition:transform .25s var(--ease),box-shadow .25s,background .25s,border-color .25s,color .25s;
+}
+.btn svg{width:17px;height:17px}
+.btn-primary{background:var(--wine);color:#fff;box-shadow:var(--shadow-sm)}
+.btn-primary:hover{background:var(--wine-2);transform:translateY(-2px);box-shadow:0 16px 32px -10px rgba(125,40,55,.4)}
+.btn-ghost{background:transparent;color:var(--text);border-color:var(--line-2)}
+.btn-ghost:hover{border-color:var(--text);transform:translateY(-2px)}
+
+/* ============================================================
+   NAV
+   ============================================================ */
+.nav{
+  position:fixed;top:0;left:0;right:0;height:var(--nav-h);z-index:100;
+  display:flex;align-items:center;
+  background:rgba(251,247,241,.78);backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--line);
+}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:11px}
+.brand-mark{
+  width:38px;height:38px;border-radius:11px;background:var(--wine);
+  display:flex;align-items:center;justify-content:center;color:#fbf7f1;
+  font-family:var(--display);font-weight:700;font-size:1.3rem;line-height:1;
+  box-shadow:var(--shadow-sm);
+}
+.brand-name{font-family:var(--display);font-weight:600;font-size:1.32rem;letter-spacing:.005em;line-height:1;font-variation-settings:"opsz" 24}
+.brand-name i{font-style:normal;color:var(--rose);font-weight:700}
+.nav-links{display:flex;align-items:center;gap:2px;list-style:none}
+.nav-links a{
+  font-weight:600;font-size:.92rem;color:var(--text-soft);padding:9px 15px;border-radius:999px;
+  transition:color .2s,background .2s;
+}
+.nav-links a:hover,.nav-links a.active{color:var(--wine);background:rgba(125,40,55,.06)}
+.nav-links a.cta{margin-left:8px;background:var(--wine);color:#fff}
+.nav-links a.cta:hover{background:var(--wine-2)}
+.burger{display:none;flex-direction:column;gap:5px;padding:6px}
+.burger span{width:24px;height:2px;background:var(--text);border-radius:2px}
+
+/* ============================================================
+   SECTION SHELL
+   ============================================================ */
+section{
+  padding:var(--sec-pad) 0;
+  position:relative;
+}
+section.section-tight{padding:var(--sec-pad) 0}
+.sec-head{margin-bottom:24px;max-width:720px}
+.sec-head .eyebrow{margin-bottom:14px;display:inline-block}
+.sec-head h2{font-family:var(--display);font-weight:600;font-size:clamp(2.2rem,4.2vw,3.4rem);
+  line-height:1.04;letter-spacing:-.015em;font-variation-settings:"opsz" 120}
+.sec-head h2 .it{font-style:italic;font-weight:500;color:var(--wine)}
+.sec-head p{margin-top:14px;color:var(--muted);font-size:1.02rem;max-width:580px}
+
+/* reveal on scroll */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.08s}
+.reveal.d2{transition-delay:.16s}
+.reveal.d3{transition-delay:.24s}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{min-height:100vh;padding-top:var(--nav-h);padding-bottom:24px;display:flex;align-items:center;position:relative;overflow:hidden}
+.hero .wrap{width:100%}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+.hero-text .badge{
+  display:inline-flex;align-items:center;gap:10px;padding:7px 15px;
+  background:var(--surface);border:1px solid var(--line-2);border-radius:999px;
+  font-size:.78rem;font-weight:600;color:var(--text-soft);margin-bottom:22px;box-shadow:var(--shadow-sm);
+}
+.hero-text .badge .dot{width:7px;height:7px;border-radius:50%;background:#4caf50;box-shadow:0 0 12px #4caf50}
+.hero-text h1{
+  font-family:var(--display);font-weight:500;font-size:clamp(2.8rem,6.2vw,5.4rem);
+  line-height:.96;letter-spacing:-.02em;margin-bottom:18px;font-variation-settings:"opsz" 144;
+}
+.hero-text h1 .it{font-style:italic;font-weight:400;color:var(--wine)}
+.hero-text .role{font-family:var(--mono);font-size:.86rem;color:var(--muted);text-transform:uppercase;letter-spacing:.18em;margin-bottom:22px}
+.hero-text .lead{color:var(--text-soft);font-size:1.08rem;max-width:520px;margin-bottom:30px;line-height:1.65}
+.hero-text .lead b{color:var(--wine);font-weight:700}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px}
+.hero-stats{display:grid;grid-template-columns:repeat(3,auto);gap:32px;max-width:430px}
+.hero-stats .s b{display:block;font-family:var(--display);font-weight:600;font-size:2rem;color:var(--wine);line-height:1;font-variation-settings:"opsz" 72}
+.hero-stats .s span{font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.13em;margin-top:6px;display:block;font-weight:600}
+
+.hero-photo{position:relative;justify-self:end;width:100%;max-width:420px}
+.hero-photo .frame{
+  position:relative;aspect-ratio:3/4;border-radius:24px;overflow:hidden;
+  border:1px solid var(--line);box-shadow:var(--shadow);
+}
+.hero-photo .frame img{width:100%;height:100%;object-fit:cover;object-position:center 18%}
+.hero-photo .accent{
+  position:absolute;width:78%;aspect-ratio:1;border-radius:50%;
+  background:linear-gradient(135deg,var(--rose-soft),transparent 60%);
+  top:-8%;right:-10%;z-index:-1;filter:blur(8px);
+}
+.hero-photo .accent-2{
+  position:absolute;width:42%;aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle,rgba(125,40,55,.12),transparent 65%);
+  bottom:-8%;left:-10%;z-index:-1;
+}
+.hero-photo .tag{
+  position:absolute;left:-26px;bottom:46px;background:var(--surface);border:1px solid var(--line);
+  padding:14px 18px;border-radius:14px;box-shadow:var(--shadow);display:flex;align-items:center;gap:12px;
+}
+.hero-photo .tag .ic{width:36px;height:36px;border-radius:10px;background:var(--rose-soft);
+  display:flex;align-items:center;justify-content:center;color:var(--wine)}
+.hero-photo .tag .ic svg{width:18px;height:18px}
+.hero-photo .tag small{display:block;font-size:.66rem;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+.hero-photo .tag b{font-family:var(--display);font-weight:600;font-size:1.02rem;line-height:1.1}
+
+/* ============================================================
+   ABOUT
+   ============================================================ */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-copy h2{font-family:var(--display);font-weight:500;font-size:clamp(2rem,3.8vw,3rem);line-height:1.08;margin-bottom:18px;font-variation-settings:"opsz" 120}
+.about-copy h2 .it{font-style:italic;color:var(--wine)}
+.about-copy p{color:var(--text-soft);margin-bottom:14px;font-size:1.02rem}
+.about-copy p b{color:var(--text);font-weight:700}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}
+.chip{display:inline-flex;align-items:center;gap:9px;padding:9px 16px;background:var(--surface);
+  border:1px solid var(--line);border-radius:999px;font-weight:600;font-size:.84rem;color:var(--text-soft);box-shadow:var(--shadow-sm)}
+.chip svg{width:14px;height:14px;color:var(--wine)}
+
+.about-aside{display:grid;gap:18px}
+.metric{
+  display:flex;align-items:center;gap:18px;padding:22px 24px;
+  background:var(--surface);border:1px solid var(--line);border-radius:18px;
+  box-shadow:var(--shadow-sm);transition:transform .35s var(--ease),box-shadow .35s;
+}
+.metric:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.metric .num{font-family:var(--display);font-weight:600;font-size:2.4rem;color:var(--wine);line-height:1;font-variation-settings:"opsz" 72;min-width:110px}
+.metric .text{flex:1}
+.metric h4{font-family:var(--display);font-weight:600;font-size:1.05rem;margin-bottom:3px}
+.metric p{color:var(--muted);font-size:.86rem;line-height:1.45;margin:0}
+
+/* ============================================================
+   EXPERIENCE
+   ============================================================ */
+.exp-card{
+  background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:38px;
+  box-shadow:var(--shadow-sm);position:relative;overflow:hidden;
+}
+.exp-card::before{
+  content:"";position:absolute;top:0;left:0;width:5px;height:100%;background:var(--grad);
+}
+.exp-head{display:flex;align-items:flex-start;justify-content:space-between;gap:30px;flex-wrap:wrap;margin-bottom:8px;padding-bottom:22px;border-bottom:1px dashed var(--line-2)}
+.exp-co{display:flex;align-items:center;gap:18px}
+.exp-co .logo{
+  width:60px;height:60px;border-radius:14px;background:var(--wine);color:#fbf7f1;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--display);font-weight:700;font-size:1.6rem;letter-spacing:-.02em;
+  box-shadow:var(--shadow-sm);
+}
+.exp-co h3{font-family:var(--display);font-weight:600;font-size:1.7rem;line-height:1;font-variation-settings:"opsz" 72}
+.exp-co .meta{font-size:.86rem;color:var(--muted);margin-top:6px;display:flex;gap:12px;flex-wrap:wrap}
+.exp-co .meta span{display:inline-flex;align-items:center;gap:6px}
+.exp-period{font-family:var(--mono);font-size:.78rem;color:var(--wine);background:rgba(125,40,55,.07);
+  padding:8px 13px;border-radius:8px;letter-spacing:.05em;text-transform:uppercase;white-space:nowrap}
+.exp-role{font-family:var(--display);font-weight:600;font-size:1.22rem;color:var(--wine);margin:20px 0 16px;font-style:italic;font-variation-settings:"opsz" 72}
+.exp-list{list-style:none;display:flex;flex-direction:column;gap:11px}
+.exp-list li{position:relative;padding-left:26px;font-size:.96rem;color:var(--text-soft);line-height:1.6}
+.exp-list li::before{
+  content:"";position:absolute;left:0;top:.6em;width:9px;height:9px;border-radius:50%;
+  background:var(--rose);box-shadow:0 0 0 4px rgba(200,153,104,.16);
+}
+.exp-list li b{color:var(--text);font-weight:700}
+
+/* ============================================================
+   EDUCATION
+   ============================================================ */
+.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.edu-card{
+  background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:32px;
+  box-shadow:var(--shadow-sm);transition:transform .35s var(--ease),box-shadow .35s,border-color .35s;
+  position:relative;
+}
+.edu-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--rose)}
+.edu-card .badge{display:inline-block;font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--wine);background:rgba(125,40,55,.08);padding:5px 11px;border-radius:6px;font-weight:500;margin-bottom:16px}
+.edu-card h4{font-family:var(--display);font-weight:600;font-size:1.32rem;line-height:1.15;margin-bottom:8px;font-variation-settings:"opsz" 72}
+.edu-card .inst{color:var(--text-soft);font-size:.94rem;font-weight:500;margin-bottom:14px}
+.edu-card .dist{display:inline-flex;align-items:center;gap:7px;font-size:.84rem;color:var(--rose);font-weight:700}
+.edu-card .dist svg{width:15px;height:15px}
+.edu-card .topics{margin-top:16px;padding-top:16px;border-top:1px dashed var(--line-2);font-size:.85rem;color:var(--muted);line-height:1.5}
+.edu-card .topics b{color:var(--text-soft);font-weight:700;display:block;margin-bottom:4px;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase}
+
+/* ============================================================
+   SKILLS
+   ============================================================ */
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.skill-col{
+  background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:28px;
+  box-shadow:var(--shadow-sm);transition:transform .35s var(--ease),box-shadow .35s;
+}
+.skill-col:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.skill-col .head{display:flex;align-items:center;gap:14px;margin-bottom:20px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.skill-col .head .ic{
+  width:42px;height:42px;border-radius:12px;background:var(--rose-soft);
+  display:flex;align-items:center;justify-content:center;color:var(--wine);flex-shrink:0;
+}
+.skill-col .head .ic svg{width:20px;height:20px}
+.skill-col .head h4{font-family:var(--display);font-weight:600;font-size:1.18rem;line-height:1.1;font-variation-settings:"opsz" 72}
+.skill-col .head .h-sub{font-size:.74rem;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;font-weight:600;margin-top:2px}
+.tags{display:flex;flex-wrap:wrap;gap:7px}
+.tags span{
+  display:inline-block;padding:7px 13px;background:var(--bg-2);border:1px solid transparent;
+  border-radius:8px;font-size:.82rem;font-weight:600;color:var(--text-soft);transition:.2s;
+}
+.tags span:hover{background:var(--rose-soft);color:var(--wine);border-color:rgba(125,40,55,.16)}
+
+/* languages strip */
+.lang-strip{margin-top:42px;display:flex;align-items:center;gap:32px;flex-wrap:wrap;justify-content:center;
+  padding:22px 30px;background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow-sm)}
+.lang-strip .label{font-family:var(--mono);font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.18em;font-weight:600}
+.lang-strip .langs{display:flex;gap:28px;flex-wrap:wrap}
+.lang-strip .lg{display:flex;align-items:baseline;gap:8px}
+.lang-strip .lg b{font-family:var(--display);font-weight:600;font-size:1.15rem;font-variation-settings:"opsz" 72}
+.lang-strip .lg small{font-size:.74rem;color:var(--muted);letter-spacing:.05em;font-weight:600}
+
+/* ============================================================
+   RECOGNITION
+   ============================================================ */
+.recog{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:stretch}
+.award-card{
+  position:relative;background:linear-gradient(140deg,#fff,var(--surface-2));
+  border:1px solid var(--line);border-radius:24px;padding:38px;overflow:hidden;box-shadow:var(--shadow)
+}
+.award-card::before{
+  content:"";position:absolute;top:-60px;right:-40px;width:240px;height:240px;border-radius:50%;
+  background:radial-gradient(circle,rgba(200,153,104,.4),transparent 70%);
+}
+.award-card .ribbon{
+  display:inline-flex;align-items:center;gap:10px;background:var(--wine);color:#fbf7f1;
+  padding:7px 14px;border-radius:6px;font-family:var(--mono);font-size:.72rem;
+  letter-spacing:.16em;text-transform:uppercase;font-weight:500;margin-bottom:22px;position:relative
+}
+.award-card .ribbon svg{width:13px;height:13px;color:var(--rose)}
+.award-card h3{font-family:var(--display);font-weight:500;font-size:clamp(1.8rem,3.5vw,2.6rem);line-height:1.08;margin-bottom:10px;position:relative;font-variation-settings:"opsz" 120}
+.award-card h3 .it{font-style:italic;color:var(--wine)}
+.award-card .org{color:var(--text-soft);font-weight:600;margin-bottom:18px;position:relative}
+.award-card .desc{color:var(--text-soft);font-size:.97rem;line-height:1.6;max-width:520px;position:relative}
+.award-card .medal{
+  position:absolute;right:34px;bottom:30px;width:74px;height:74px;border-radius:50%;
+  background:var(--grad);display:flex;align-items:center;justify-content:center;color:#fff;
+  box-shadow:0 16px 40px -10px rgba(125,40,55,.5);
+}
+.award-card .medal svg{width:36px;height:36px}
+
+.appreciations{
+  background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:32px;box-shadow:var(--shadow-sm);
+  display:flex;flex-direction:column;justify-content:center;
+}
+.appreciations h4{font-family:var(--display);font-weight:600;font-size:1.3rem;margin-bottom:6px;line-height:1.1;font-variation-settings:"opsz" 72}
+.appreciations .quote{color:var(--text-soft);font-size:.95rem;line-height:1.6;margin:14px 0;font-style:italic;
+  border-left:3px solid var(--rose);padding-left:18px}
+.appreciations .from{font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;font-weight:700;margin-top:10px}
+
+/* ============================================================
+   CONTACT
+   ============================================================ */
+.contact-card{
+  max-width:980px;margin:0 auto;background:linear-gradient(140deg,#fff,var(--surface-2));
+  border:1px solid var(--line);border-radius:26px;padding:46px;box-shadow:var(--shadow);position:relative;overflow:hidden;
+}
+.contact-card::before{
+  content:"";position:absolute;top:-80px;left:-80px;width:300px;height:300px;border-radius:50%;
+  background:radial-gradient(circle,rgba(200,153,104,.25),transparent 65%);
+}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start;position:relative}
+.contact-lead h2{font-family:var(--display);font-weight:500;font-size:clamp(1.9rem,3.6vw,2.8rem);line-height:1.08;margin-bottom:14px;font-variation-settings:"opsz" 120}
+.contact-lead h2 .it{font-style:italic;color:var(--wine)}
+.contact-lead p{color:var(--text-soft);font-size:1rem;max-width:380px;margin-bottom:24px}
+.contact-lead .quick{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
+
+.contact-list{display:flex;flex-direction:column;gap:14px}
+.ci{
+  display:flex;align-items:center;gap:14px;padding:16px 18px;background:rgba(255,255,255,.6);
+  border:1px solid var(--line);border-radius:14px;transition:transform .25s var(--ease),border-color .25s,background .25s;
+}
+.ci:hover{transform:translateY(-2px);border-color:var(--rose);background:#fff}
+.ci .ic{width:42px;height:42px;border-radius:11px;background:var(--rose-soft);
+  display:flex;align-items:center;justify-content:center;color:var(--wine);flex-shrink:0}
+.ci .ic svg{width:20px;height:20px}
+.ci small{display:block;font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.14em;font-weight:700;margin-bottom:2px}
+.ci b{font-weight:600;font-size:.96rem;display:block;word-break:break-word}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.foot{padding:30px 0 36px;text-align:center;border-top:1px solid var(--line);margin-top:50px}
+.foot p{color:var(--muted);font-size:.86rem}
+.foot p .heart{color:var(--wine)}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media(max-width:980px){
+  section{padding:60px 0}
+  .hero{padding-top:calc(var(--nav-h) + 24px)}
+  .hero .wrap,.about-grid,.recog,.contact-grid{grid-template-columns:1fr;gap:42px}
+  .skills-grid,.edu-grid{grid-template-columns:1fr}
+  .hero-photo{justify-self:center;max-width:360px}
+  .hero-photo .tag{left:auto;right:-12px;bottom:30px}
+  .exp-head{flex-direction:column;align-items:flex-start;gap:12px}
+}
+@media(max-width:760px){
+  .nav-links{position:fixed;top:var(--nav-h);right:0;width:min(80vw,300px);height:calc(100vh - var(--nav-h));
+    flex-direction:column;align-items:stretch;gap:8px;padding:22px;background:var(--bg);
+    border-left:1px solid var(--line);transform:translateX(100%);transition:transform .35s var(--ease)}
+  .nav-links.open{transform:translateX(0)}
+  .nav-links a{padding:14px 16px}
+  .nav-links a.cta{margin-left:0}
+  .burger{display:flex}
+  .hero-stats{grid-template-columns:repeat(3,1fr);gap:16px}
+  .exp-card,.award-card,.contact-card{padding:26px}
+}
+@media(max-width:480px){
+  .wrap{padding:0 20px}
+  .hero-photo .tag{left:auto;right:0;bottom:14px;padding:10px 14px}
+  .hero-photo .tag b{font-size:.9rem}
+}
+/* ============================================================
+   COMPACT MODE — every section fits exactly one viewport
+   ============================================================ */
+.sec-head{margin-bottom:22px}
+.sec-head h2{font-size:clamp(1.7rem,3.2vw,2.4rem);line-height:1.05}
+.sec-head p{margin-top:8px;font-size:.94rem}
+
+/* hero compaction */
+.hero-text h1{font-size:clamp(2.5rem,5.8vw,4.8rem);margin-bottom:14px}
+.hero-text .badge{margin-bottom:18px}
+.hero-text .role{margin-bottom:18px}
+.hero-text .lead{font-size:1rem;margin-bottom:24px}
+.hero-cta{margin-bottom:26px}
+.hero-stats{gap:26px}
+.hero-stats .s b{font-size:1.75rem}
+
+/* about */
+.about-grid{gap:48px}
+.about-copy h2{font-size:clamp(1.8rem,3.4vw,2.6rem)}
+.about-copy p{margin-bottom:11px;font-size:.98rem}
+.chips{margin-top:18px}
+.about-aside{gap:14px}
+.metric{padding:16px 20px;gap:16px}
+.metric .num{font-size:2rem;min-width:88px}
+.metric h4{font-size:1rem}
+.metric p{font-size:.84rem}
+
+/* experience */
+.exp-card{padding:24px}
+.exp-head{margin-bottom:6px;padding-bottom:14px;gap:20px}
+.exp-co{gap:14px}
+.exp-co .logo{width:48px;height:48px;font-size:1.3rem}
+.exp-co h3{font-size:1.45rem}
+.exp-co .meta{font-size:.8rem;margin-top:4px;gap:10px}
+.exp-period{font-size:.72rem;padding:6px 10px}
+.exp-role{font-size:1.05rem;margin:10px 0 8px}
+.exp-list{gap:6px}
+.exp-list li{padding-left:22px;font-size:.88rem;line-height:1.5}
+.exp-list li::before{width:7px;height:7px;top:.55em;box-shadow:0 0 0 3px rgba(200,153,104,.16)}
+
+/* education */
+.edu-card{padding:24px}
+.edu-card h4{font-size:1.2rem;margin-bottom:6px}
+.edu-card .inst{font-size:.88rem;margin-bottom:10px}
+.edu-card .badge{margin-bottom:12px;padding:4px 9px;font-size:.66rem}
+.edu-card .topics{margin-top:12px;padding-top:12px;font-size:.8rem}
+
+/* skills */
+.skill-col{padding:22px}
+.skill-col .head{margin-bottom:14px;padding-bottom:12px;gap:12px}
+.skill-col .head .ic{width:38px;height:38px;border-radius:11px}
+.skill-col .head .ic svg{width:18px;height:18px}
+.skill-col .head h4{font-size:1.05rem}
+.skill-col .head .h-sub{font-size:.7rem}
+.tags{gap:6px}
+.tags span{padding:6px 11px;font-size:.78rem}
+.lang-strip{margin-top:22px;padding:14px 24px;gap:24px}
+.lang-strip .lg b{font-size:1.05rem}
+
+/* recognition */
+.award-card{padding:28px}
+.award-card .ribbon{margin-bottom:14px;padding:6px 12px;font-size:.68rem}
+.award-card h3{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:6px}
+.award-card .org{margin-bottom:12px;font-size:.92rem}
+.award-card .desc{font-size:.92rem;line-height:1.55;max-width:460px}
+.award-card .medal{width:60px;height:60px;right:24px;bottom:22px}
+.award-card .medal svg{width:30px;height:30px}
+.appreciations{padding:22px}
+.appreciations h4{font-size:1.15rem;margin-bottom:4px}
+.appreciations .quote{font-size:.92rem;margin:10px 0;padding-left:14px}
+.appreciations .from{font-size:.74rem}
+
+/* contact */
+.contact-card{padding:32px}
+.contact-grid{gap:26px}
+.contact-lead h2{font-size:clamp(1.7rem,3.1vw,2.3rem)}
+.contact-lead p{font-size:.94rem;margin-bottom:18px}
+.ci{padding:12px 14px;gap:12px}
+.ci .ic{width:38px;height:38px}
+.ci small{font-size:.66rem}
+.ci b{font-size:.92rem}
+
+/* ============================================================
+   FINE-TUNE per user feedback
+   ============================================================ */
+/* HERO — desktop only: tighter gap + fixed-width photo column.
+   Scoped to >=981px so the mobile single-column rule is never overridden. */
+@media(min-width:981px){
+  .hero .wrap{grid-template-columns:1fr 360px;gap:36px;align-items:center}
+  .hero-photo{max-width:360px;justify-self:end}
+}
+.hero-photo .frame{box-shadow:0 18px 50px -20px rgba(125,40,55,.28)}
+
+/* EXPERIENCE — deeper compaction so the whole card fits on small windows */
+.exp-card{padding:20px 22px}
+.exp-head{padding-bottom:10px;margin-bottom:4px}
+.exp-co{gap:12px}
+.exp-co .logo{width:44px;height:44px;font-size:1.2rem;border-radius:12px}
+.exp-co h3{font-size:1.35rem}
+.exp-co .meta{font-size:.78rem;margin-top:3px}
+.exp-period{font-size:.7rem;padding:5px 10px}
+.exp-role{font-size:1rem;margin:8px 0 6px}
+.exp-list{gap:4px}
+.exp-list li{padding-left:20px;font-size:.85rem;line-height:1.46}
+.exp-list li::before{width:6px;height:6px;top:.62em;box-shadow:0 0 0 3px rgba(200,153,104,.16)}
+
+/* SKILLS — deeper compaction, especially in the densest column */
+.skill-col{padding:18px}
+.skill-col .head{margin-bottom:10px;padding-bottom:10px;gap:11px}
+.skill-col .head .ic{width:34px;height:34px;border-radius:10px}
+.skill-col .head .ic svg{width:16px;height:16px}
+.skill-col .head h4{font-size:1rem}
+.skill-col .head .h-sub{font-size:.65rem;margin-top:1px}
+.tags{gap:5px}
+.tags span{padding:5px 9px;font-size:.74rem}
+.lang-strip{margin-top:18px;padding:12px 20px;gap:18px}
+.lang-strip .label{font-size:.66rem}
+.lang-strip .lg b{font-size:1rem}
+.lang-strip .lg small{font-size:.7rem}
+
+/* CONTACT — page ends right after the card; consistent top rhythm */
+#contact{padding:var(--sec-pad) 0 calc(var(--sec-pad) + 6px)}
+.contact-card{padding:28px 32px}
+/* ============================================================
+   FINAL — robust Experience one-screen fit + Education balance
+   (last block: authoritative, no stacking conflicts)
+   ============================================================ */
+/* EXPERIENCE: trim breathing room so the full card clears a laptop screen */
+#experience .sec-head{margin-bottom:14px}
+#experience .sec-head p{margin-top:6px}
+.exp-card{padding:16px 24px}
+.exp-head{padding-bottom:10px;margin-bottom:2px}
+.exp-role{margin:6px 0 6px}
+.exp-list{gap:4px}
+.exp-list li{font-size:.85rem;line-height:1.42}
+
+/* EDUCATION: fuller, more balanced cards (clearer hierarchy, equal height) */
+.edu-grid{gap:26px}
+.edu-card{padding:32px 30px;display:flex;flex-direction:column}
+.edu-card .badge{margin-bottom:18px;padding:5px 11px;font-size:.68rem}
+.edu-card h4{font-size:1.3rem;margin-bottom:8px}
+.edu-card .inst{font-size:.92rem;margin-bottom:16px;line-height:1.5}
+.edu-card .dist{font-size:.86rem}
+.edu-card .topics{margin-top:auto;padding-top:18px;font-size:.82rem;line-height:1.55}
+.edu-card .topics b{margin-bottom:6px}
+
+@media(max-width:980px){
+  section{padding:46px 0}
+  .hero{min-height:auto;padding-top:calc(var(--nav-h) + 20px);padding-bottom:42px}
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     NAV
+     ============================================================ -->
+<header class="nav">
+  <div class="wrap">
+    <a href="#home" class="brand">
+      <span class="brand-mark">A</span>
+      <span class="brand-name">Abinaya<i>.</i></span>
+    </a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact" class="cta">Get in Touch</a></li>
+      </ul>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ============================================================
+     HERO / HOME
+     ============================================================ -->
+<section id="home" class="hero">
+  <div class="wrap">
+    <div class="hero-text reveal">
+      <span class="badge"><span class="dot"></span>Open to opportunities · Chennai</span>
+      <h1>Abinaya<br><span class="it">Saravanan</span></h1>
+      <div class="role">Regulatory Affairs &nbsp;·&nbsp; Compliance &nbsp;·&nbsp; SAP EHS</div>
+      <p class="lead">
+        I help cosmetic brands bring safer products to global markets — leading
+        <b>EU &amp; UK regulatory compliance</b> for <b>700+ products</b> at Capgemini through
+        SDS, PIFs, PCNs, and end-to-end documentation across REACH, MOCRA, CASA &amp; CLP.
+      </p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary">Let's Connect
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="Abinaya_Saravanan_Resume.pdf" download="Abinaya_Saravanan_Resume.pdf" class="btn btn-ghost">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+          Download Resume
+        </a>
+        <a href="https://www.linkedin.com/in/abinaya-saravanan-356a37259" target="_blank" rel="noopener" class="btn btn-ghost">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5a2 2 0 1 1-4-.02 2 2 0 0 1 4 .02zM7 8.48H3V21h4V8.48zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.68-2.91v-1.68z"/></svg>
+          LinkedIn
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="s"><b>700+</b><span>Products Registered</span></div>
+        <div class="s"><b>50+</b><span>SDS &amp; PIFs</span></div>
+        <div class="s"><b>EU&nbsp;·&nbsp;UK</b><span>Markets Covered</span></div>
+      </div>
+    </div>
+
+    <div class="hero-photo reveal d1">
+      <div class="accent"></div>
+      <div class="accent-2"></div>
+      <div class="frame">
+        <img src="abinaya.jpg" alt="Portrait of Abinaya Saravanan" />
+      </div>
+      <div class="tag">
+        <span class="ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M9 14l-2 8 5-3 5 3-2-8"/></svg>
+        </span>
+        <div>
+          <small>Recognised</small>
+          <b>RNR Award · 2025</b>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ABOUT
+     ============================================================ -->
+<section id="about" class="section-tight">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-copy reveal">
+        <span class="eyebrow">About Me</span>
+        <h2>A chemist by training, a <span class="it">compliance specialist</span> by craft.</h2>
+        <p>
+          I'm Abinaya — a Regulatory Affairs &amp; Compliance Specialist based in Chennai, India.
+          With a <b>Master's in Chemistry</b> and hands-on experience at Capgemini, I bridge the
+          gap between scientific accuracy and regulatory rigor for global cosmetic brands.
+        </p>
+        <p>
+          My work spans <b>EU &amp; UK cosmetics regulations</b>, ingredient compliance review,
+          safety documentation, and submission portals like CPNP and SCPN — making sure every
+          product that reaches a customer is safe, accurate, and beautifully compliant.
+        </p>
+        <div class="chips">
+          <span class="chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Chennai, India
+          </span>
+          <span class="chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5a6 3 0 0 0 12 0v-5"/></svg>
+            M.Sc. Chemistry
+          </span>
+          <span class="chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+            1+ yr · Capgemini
+          </span>
+          <span class="chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.4H22l-6.2 4.5L18.2 22 12 17.5 5.8 22l2.4-8.1L2 9.4h7.6z"/></svg>
+            First Class Distinction
+          </span>
+        </div>
+      </div>
+
+      <div class="about-aside reveal d1">
+        <div class="metric">
+          <div class="num">700+</div>
+          <div class="text">
+            <h4>Products registered</h4>
+            <p>Cosmetic product registrations supported across EU &amp; UK markets.</p>
+          </div>
+        </div>
+        <div class="metric">
+          <div class="num">04</div>
+          <div class="text">
+            <h4>Regulatory frameworks</h4>
+            <p>Day-to-day work across REACH, MOCRA, CASA &amp; CLP.</p>
+          </div>
+        </div>
+        <div class="metric">
+          <div class="num">★</div>
+          <div class="text">
+            <h4>RNR Award · Capgemini</h4>
+            <p>Recognised for compliance excellence and consistent delivery.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     EXPERIENCE
+     ============================================================ -->
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Experience</span>
+      <h2>Where I'm <span class="it">building expertise.</span></h2>
+      <p>One year in — and already a recognised contributor to global cosmetic compliance at Capgemini.</p>
+    </div>
+
+    <article class="exp-card reveal d1">
+      <div class="exp-head">
+        <div class="exp-co">
+          <div class="logo">C</div>
+          <div>
+            <h3>Capgemini</h3>
+            <div class="meta">
+              <span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Chennai, India
+              </span>
+              <span>·</span>
+              <span>Full-time</span>
+            </div>
+          </div>
+        </div>
+        <span class="exp-period">Oct 2024 — Present</span>
+      </div>
+
+      <div class="exp-role">Regulatory Compliance Specialist</div>
+
+      <ul class="exp-list">
+        <li>Supported regulatory affairs &amp; compliance activities for <b>700+ cosmetic products</b> across EU and UK markets, fully aligned with global cosmetic regulations.</li>
+        <li>Prepared, reviewed and maintained <b>50+ Safety Data Sheets (SDS)</b> in line with CLP regulations, hazard communication and chemical compliance standards.</li>
+        <li>Developed and managed <b>50+ Product Information Files (PIFs)</b>, ensuring accurate documentation control and product compliance readiness.</li>
+        <li>Worked extensively across <b>REACH, MOCRA, CASA and CLP</b> frameworks to meet international cosmetic compliance requirements.</li>
+        <li>Assisted with <b>Poison Centre Notifications (PCNs)</b>, ingredient compliance verification, labelling reviews and regulatory submission support for compliant product launches.</li>
+        <li>Used <b>SAP EHS, SAP Fiori, IUCLID, Nexa, CPNP &amp; SCPN</b> portals for regulatory data, compliance tracking and documentation management.</li>
+        <li>Collaborated with cross-functional teams and stakeholders to ensure timely submissions and smooth execution of compliance activities.</li>
+        <li>Presented monthly <b>compliance updates, capacity utilisation</b> and project status reports to clients and stakeholders.</li>
+        <li>Proposed <b>automation and process improvement</b> ideas to enhance operational efficiency, quality and compliance workflows.</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<!-- ============================================================
+     EDUCATION
+     ============================================================ -->
+<section id="education" class="section-tight">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Education</span>
+      <h2>A foundation in <span class="it">chemistry.</span></h2>
+    </div>
+
+    <div class="edu-grid">
+      <article class="edu-card reveal d1">
+        <span class="badge">Oct 2021 — Jun 2023</span>
+        <h4>Master of Chemistry</h4>
+        <p class="inst">Ethiraj College for Women &nbsp;·&nbsp; University of Madras, Chennai</p>
+        <span class="dist">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5L22 10l-5.5 5L18 22l-6-3.5L6 22l1.5-7L2 10l7-1.5z"/></svg>
+          First Class with Distinction
+        </span>
+        <div class="topics">
+          <b>Coursework</b>
+          Analytical Chemistry · Organic Chemistry · Industrial Chemistry · Chemical Safety
+        </div>
+      </article>
+
+      <article class="edu-card reveal d2">
+        <span class="badge">Jul 2018 — Aug 2021</span>
+        <h4>Bachelor of Chemistry</h4>
+        <p class="inst">Kamban College of Arts &amp; Science for Women &nbsp;·&nbsp; Thiruvalluvar University</p>
+        <span class="dist">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5L22 10l-5.5 5L18 22l-6-3.5L6 22l1.5-7L2 10l7-1.5z"/></svg>
+          First Class with Distinction
+        </span>
+        <div class="topics">
+          <b>Coursework</b>
+          Chemical Analysis · Laboratory Practices · Scientific Documentation · Organic Chemistry
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SKILLS
+     ============================================================ -->
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Skills &amp; Tools</span>
+      <h2>What I bring to the <span class="it">table.</span></h2>
+      <p>A blend of regulatory depth, technical fluency and the soft skills that keep large compliance projects moving.</p>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-col reveal">
+        <div class="head">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span>
+          <div>
+            <h4>Core Expertise</h4>
+            <div class="h-sub">Regulatory Affairs</div>
+          </div>
+        </div>
+        <div class="tags">
+          <span>EU &amp; UK Cosmetics</span>
+          <span>Regulatory Affairs</span>
+          <span>Product Registration</span>
+          <span>PIFs</span>
+          <span>SDS</span>
+          <span>PCNs</span>
+          <span>REACH</span>
+          <span>MOCRA</span>
+          <span>CASA</span>
+          <span>CLP</span>
+          <span>GMP Awareness</span>
+          <span>GHS Labelling</span>
+          <span>Ingredient Review</span>
+          <span>Product Stewardship</span>
+          <span>Compliance Tracking</span>
+        </div>
+      </div>
+
+      <div class="skill-col reveal d1">
+        <div class="head">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></span>
+          <div>
+            <h4>Technical Tools</h4>
+            <div class="h-sub">Platforms &amp; Software</div>
+          </div>
+        </div>
+        <div class="tags">
+          <span>SAP EHS</span>
+          <span>SAP Fiori</span>
+          <span>IUCLID</span>
+          <span>Nexa Tool</span>
+          <span>CPNP Portal</span>
+          <span>SCPN Portal</span>
+          <span>MS Excel</span>
+          <span>MS Word</span>
+          <span>MS PowerPoint</span>
+        </div>
+      </div>
+
+      <div class="skill-col reveal d2">
+        <div class="head">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="4"/><path d="M3 21a6 6 0 0 1 12 0M16 3a4 4 0 0 1 0 8M21 21a6 6 0 0 0-3-5"/></svg></span>
+          <div>
+            <h4>Strengths</h4>
+            <div class="h-sub">Soft &amp; Process Skills</div>
+          </div>
+        </div>
+        <div class="tags">
+          <span>Client Presentation</span>
+          <span>Capacity Reporting</span>
+          <span>Cross-functional Collaboration</span>
+          <span>Stakeholder Communication</span>
+          <span>Time Management</span>
+          <span>Multitasking</span>
+          <span>Process Improvement</span>
+          <span>Documentation Management</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="lang-strip reveal">
+      <span class="label">Languages</span>
+      <div class="langs">
+        <div class="lg"><b>English</b><small>Professional</small></div>
+        <div class="lg"><b>Tamil</b><small>Native</small></div>
+        <div class="lg"><b>Hindi</b><small>Conversational</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     RECOGNITION
+     ============================================================ -->
+<section id="recognition" class="section-tight">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Recognition</span>
+      <h2>Honoured for <span class="it">consistent excellence.</span></h2>
+    </div>
+
+    <div class="recog">
+      <article class="award-card reveal d1">
+        <span class="ribbon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5L22 10l-5.5 5L18 22l-6-3.5L6 22l1.5-7L2 10l7-1.5z"/></svg>
+          Aug 2025
+        </span>
+        <h3>Xtramile <span class="it">RNR Award</span></h3>
+        <p class="org">Rewards &amp; Recognition Team · Capgemini</p>
+        <p class="desc">
+          Awarded in recognition of dedication, high-quality deliverables, and valuable contributions
+          toward the success of regulatory compliance projects and organisational goals.
+        </p>
+        <div class="medal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M9 14l-2 8 5-3 5 3-2-8" stroke-linejoin="round"/></svg>
+        </div>
+      </article>
+
+      <aside class="appreciations reveal d2">
+        <span class="eyebrow">Client Appreciations</span>
+        <h4>Multiple recognitions from clients &amp; stakeholders.</h4>
+        <p class="quote">
+          Repeatedly recognised for maintaining high-quality work, strong communication, accuracy
+          and timely delivery of compliance activities.
+        </p>
+        <span class="from">— Capgemini Clients &amp; Stakeholders</span>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT
+     ============================================================ -->
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-card reveal">
+      <div class="contact-grid">
+        <div class="contact-lead">
+          <span class="eyebrow">Get in Touch</span>
+          <h2>Let's build <span class="it">compliant, beautiful products</span> — together.</h2>
+          <p>Open to roles in Regulatory Affairs, Compliance and Product Stewardship across cosmetics, pharma and chemicals.</p>
+          <div class="quick">
+            <a href="mailto:sv21abinaya@gmail.com" class="btn btn-primary">Email Me
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <!-- <a href="Abinaya_Saravanan_Resume.pdf" download="Abinaya_Saravanan_Resume.pdf" class="btn btn-ghost">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+              Download Resume
+            </a> -->
+            <a href="https://www.linkedin.com/in/abinaya-saravanan-356a37259" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
+          </div>
+        </div>
+
+        <div class="contact-list">
+          <a class="ci" href="mailto:sv21abinaya@gmail.com">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+            <div><small>Email</small><b>sv21abinaya@gmail.com</b></div>
+          </a>
+          <a class="ci" href="tel:+919344965695">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+            <div><small>Phone</small><b>+91 93449 65695</b></div>
+          </a>
+          <a class="ci" href="https://www.linkedin.com/in/abinaya-saravanan-356a37259" target="_blank" rel="noopener">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5a2 2 0 1 1-4-.02 2 2 0 0 1 4 .02zM7 8.48H3V21h4V8.48zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.68-2.91v-1.68z"/></svg></span>
+            <div><small>LinkedIn</small><b>abinaya-saravanan</b></div>
+          </a>
+          <div class="ci" style="cursor:default">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <div><small>Location</small><b>Chennai, India</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const $=s=>document.querySelector(s);
+  const $$=s=>[...document.querySelectorAll(s)];
+  /* mobile menu */
+  const burger=$("#burger"), navLinks=$("#navLinks");
+  if(burger){
+    burger.addEventListener('click',()=>navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
+  }
+
+  /* reveal on scroll */
+  const io=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  $$('.reveal').forEach(el=>io.observe(el));
+
+  /* active nav link on scroll */
+  const links=$$('.nav-links a[href^="#"]');
+  const sections=links.map(l=>document.querySelector(l.getAttribute('href'))).filter(Boolean);
+  function spy(){
+    const y=window.scrollY+90;
+    let active=sections[0];
+    sections.forEach(s=>{ if(s.offsetTop<=y) active=s; });
+    links.forEach(l=>l.classList.toggle('active', l.getAttribute('href')==='#'+active.id));
+  }
+  window.addEventListener('scroll',spy,{passive:true}); spy();
+</script>
+
+</body>
+</html>
